@@ -1,0 +1,20 @@
+Name: testhsscript
+Version: 0.1
+License: PublicDomain
+Build-Type: Simple
+Cabal-Version: >= 1.10
+
+Library
+    Build-Depends: base, Glob
+    Exposed-Modules: Test
+    hs-source-dirs: lib
+    GHC-Options: -Wall
+    Default-Language: Haskell2010
+
+Executable test
+    Default-Language: Haskell2010
+    Build-Depends: ghc >= 8.0 && <= 8.0.1, base, ghc-paths, mtl, testhsscript, Glob, ghc-boot
+    Main-Is: test.hs
+    hs-source-dirs: lib,.
+    GHC-Options: -Wall
+    CPP-Options: -DGHCI
